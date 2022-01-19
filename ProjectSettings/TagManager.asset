@@ -10,6 +10,8 @@ TagManager:
   - ScoreText
   - GameoverCanvas
   - GameplayCanvas
+  - StartGameCanvas
+  - EndLevelCanvas
   layers:
   - Default
   - TransparentFX
