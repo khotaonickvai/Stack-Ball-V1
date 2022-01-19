@@ -196,7 +196,7 @@ public class Ball : MonoBehaviour
 
     private void CheckCompleteLevel()
     {
-        if (transform.position.y <= 0)
+        if (transform.position.y < 0)
         {
             isIngame = false;
             GameplayCanvas.enabled = false;

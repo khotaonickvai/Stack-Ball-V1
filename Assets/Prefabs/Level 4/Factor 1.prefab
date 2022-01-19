@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def0f07116ea66a4289cfcd008f4e546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyable: 0
+  destroyable: 1
   angle: 60
   scoreGain: 1
 --- !u!54 &3499383116979799330
