@@ -12,6 +12,7 @@ TagManager:
   - GameplayCanvas
   - StartGameCanvas
   - EndLevelCanvas
+  - LevelText
   layers:
   - Default
   - TransparentFX

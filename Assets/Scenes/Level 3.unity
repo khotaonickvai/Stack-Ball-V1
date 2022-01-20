@@ -725,7 +725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 898583192, guid: c981d565a4076f3448490361a9113241, type: 3}
       propertyPath: m_text
-      value: 'Level : 3'
+      value: 'Level : 5'
       objectReference: {fileID: 0}
     - target: {fileID: 1549741049, guid: c981d565a4076f3448490361a9113241, type: 3}
       propertyPath: m_AnchorMax.x

@@ -27,8 +27,7 @@ public class Stacks : MonoBehaviour
         for(int i = 0; i < stackList.Count; i ++ )
         {
             var item = stackList[i];
-            var v = transform.position;
-            item.transform.position = new Vector3(v.x, i, v.z);
+            item.transform.position = new Vector3(0, i, 0);
             var phi = item.transform.localEulerAngles;
             item.transform.localEulerAngles = 
                 new Vector3(phi.x,
