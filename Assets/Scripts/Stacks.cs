@@ -24,12 +24,16 @@ public class Stacks : MonoBehaviour
     {
         
         
-        foreach (var item in stackList)
+        for(int i = 0; i < stackList.Count; i ++ )
         {
+            var item = stackList[i];
+            var v = transform.position;
+            item.transform.position = new Vector3(v.x, i, v.z);
+            var phi = item.transform.localEulerAngles;
             item.transform.localEulerAngles = 
-                new Vector3(item.transform.localEulerAngles.x,
-                    item.transform.localEulerAngles.y + item.transform.position.y * omega / Ball.speed
-                    ,item.transform.localEulerAngles.z);
+                new Vector3(phi.x,
+                    phi.y + item.transform.position.y * omega / Ball.speed
+                    ,phi.z);
             // item.transform.localRotation = Quaternion.Euler(item.transform.rotation.x, item.transform.position.y * omega / Ball.speed + transform.rotation.y , item.transform.rotation.z);
         }
     }

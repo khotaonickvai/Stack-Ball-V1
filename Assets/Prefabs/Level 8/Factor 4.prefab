@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6455321450647706435}
   - component: {fileID: 3499383116979799330}
   m_Layer: 0
-  m_Name: Factor 2
+  m_Name: Factor 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: def0f07116ea66a4289cfcd008f4e546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyable: 0
+  destroyable: 1
   angle: 60
   scoreGain: 1
 --- !u!54 &3499383116979799330
@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: a7ca28f1375a7354da3e355e1367bf34, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a4e58dec92ac34c4cadb5abf1439e3d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 35b633476ef92e740a9015459a1b2a63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ca28f1375a7354da3e355e1367bf34, type: 3}
 --- !u!4 &5487323332025727106 stripped

@@ -18,7 +18,7 @@ public class Bouncing : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         positionCatch = new Vector3(transform.localScale.x,0, transform.localScale.z);
-        bouncingFx = GetComponentInChildren<ParticleSystem>();
+        bouncingFx = GetComponentsInChildren<ParticleSystem>()[0];
         ball = GetComponentInParent<Ball>();
     }
 
@@ -34,7 +34,7 @@ public class Bouncing : MonoBehaviour
         if (Input.GetKey(KeyCode.A)&&ball.IsInGame())
         {
             DisableRigid();
-           
+            bouncingFx.Stop();
             transform.localPosition = Vector3.up * relativeLocalPosition;
         }
         else
@@ -70,11 +70,6 @@ public class Bouncing : MonoBehaviour
                 
             }
         }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            Debug.Log(transform.localPosition);
-        }
     }
     private void EnableRigid()
     {
@@ -86,7 +81,7 @@ public class Bouncing : MonoBehaviour
     private void DisableRigid()
     {
         rb.useGravity = false;
-        rb.useGravity = true;
+        rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
