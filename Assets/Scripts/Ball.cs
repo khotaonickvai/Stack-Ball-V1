@@ -71,8 +71,9 @@ public class Ball : MonoBehaviour
     }
     private void move()
     {
+        
        
-        if (Input.GetKey(KeyCode.A)&& isIngame)
+        if (IsTouch()&& isIngame)
         {
             transform.Translate(Vector3.down * speed * Time.smoothDeltaTime);
             if (isFuzzying)
@@ -202,5 +203,21 @@ public class Ball : MonoBehaviour
             GameplayCanvas.enabled = false;
             EndLevelCanvas.enabled = true;
         }
+    }
+
+    private bool IsTouch()
+    {
+        if (Input.touchCount > 0)
+        {
+            return true;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            return true;
+        }else if (Input.GetKey(KeyCode.Mouse0))
+        {
+            return true;
+        }
+        else return false;
     }
 }

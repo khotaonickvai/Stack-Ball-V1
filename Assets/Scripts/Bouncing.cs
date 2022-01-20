@@ -31,7 +31,7 @@ public class Bouncing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A)&&ball.IsInGame())
+        if (IsTouch()&&ball.IsInGame())
         {
             DisableRigid();
             bouncingFx.Stop();
@@ -93,5 +93,20 @@ public class Bouncing : MonoBehaviour
         }
 
         return maxSpeed;
+    }
+    private bool IsTouch()
+    {
+        if (Input.touchCount > 0)
+        {
+            return true;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            return true;
+        }else if (Input.GetKey(KeyCode.Mouse0))
+        {
+            return true;
+        }
+        else return false;
     }
 }
